@@ -1,12 +1,33 @@
-/************************+
+/*************************
  Version: 1.0.12 (157)
  Date: October 31, 2020
-+*************************/
+ *************************/
+[CR / Features]
+  • Remove the crying feedback
+  • Change OOBE/Wi-fi reset screens
+  • Due to the last weekly decisions, we have removed the voice recording feature from this build (there are still some bugs that need to be fixed.
+  • [e-mail] VSaaS crying and area detection videos do not appear on event history
+  • Remove the "device mute hint" when user uses the 2-way talk feature
+  • Update strings and include Simple Chinese translation version
+  • Thumbnail was not updated in other device logged with the same account
+  • Device Management reset and OOBE flow -> user stops on pairing screen (fixed)
+  • Control by second on playback. Save video/capture photo by playback’s time stamp
 
-/************************+
+[Fixed Issues]
+  • [Airtable#256] After edit the thumbnail, user should be redirected to family album, not single photo view
+  • [Airtable#253] previous cry Json file should updated
+  • [Airtable#233] New toast after saving a video record
+  • [Airtable#244] Improve the playback movement precision
+  • [Airtable#239] Turn off soothing music on Android (device stop playing music), but iOS still remain playing mode
+      - App was taking some time to update the status because it took 2 minutes to verify the device status.
+        We have changed to 1 minute, so more or less 1 minute after the sounds stop playing the button status will be updated
+  • Reduce setting levels & re-arrange information architecture in device settings, change to query device settings from cloud (instead of from device)
+    - We have updated the temperature unit in order to work with C and F
+
+/*************************
  Version: 1.0.12 (156)
  Date: October 23, 2020
-+*************************/
+ *************************/
 [CR / Features]
   • Voice record/management
     o Implemented the voice recording amplitude animation
