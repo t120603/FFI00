@@ -1,0 +1,19 @@
+/*****************************
+ Version: 1.12.5-rc.14
+ Date: September 21, 2020
++*****************************/
+[Modification]
+  • endpoint [POST]/storages/ov 
+    /* upload video file (only for app) */
+    -- add parameters takeTime, offset
+       <note>
+       for backward compatible, if app does not set the values of takeTime
+       and offset, pixsee cloud will use current datetime as takeTime and 
+       the default value of offset is +00:00
+
+  • endpoint [PATCH]/devices/{sn}/versions
+    /* report current version (for device) */
+    -- device report to update firmware version when OOBE and OTA
+
+[Note]
+  - check APIs in https://staging.ipg-services.com/api-docs/
