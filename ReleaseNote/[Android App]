@@ -1,7 +1,62 @@
 /********************************+
+ Version: 9.37.17
+ Date: October 31, 2020
+ ********************************/
+[CR & Features]
+  • Photo thumbnail editor:
+    <Fixed issues>:
+      - Sync and Refresh updated thumbnail only
+    <Known issues>:
+      - We are still unable to have a perfect pan following the calculations
+  • Voice record (feature is disabled in this version)
+    - Add cloud icon to indicate whether the record is synced or not (hide it on swipe/long-press)
+    - Call TUTK download command after uploading a new voice recording to make it available on device
+    - Let user unsync a recording from cloud (add new option on long press/swipe and send a delete request but keeping the file locally)
+  • Media Notes
+    <Known issues>:
+      - After adding a note to the video, a note shows up in the photo layout
+  • Event History
+    <Known issues>:
+      - After delete an item, the deleted message is shown, but the item is only removed from the list when the app is restarted.
+      - Date format differs from history list item and history video view
+  • Live Stream landscape
+    <Known issues>:
+      - When saving 30 seconds video, the user must wait the video upload before leaving the screen
+  • CRs:
+    - Live Stream
+    - [Airtable#457] Retrieve current device mute status and set the mute hint accordingly
+    - Remove mute Hint 2-way-talk
+    - [Airtable#472] Redesign timeline component to use canvas to apply to Wilson's suggestion
+
+[Fixed Issues]
+  • [Airtable#253] Incorrect music length & white noise shouldn't show length
+  • [Airtable#434] In select mode of event history, tap "select all", text would change to "unselect"
+  • [Airtable#453] [Scheduling Play] content page didn't allow landscape
+  • [Airtable#464] [voice record] voice sync from iOS shows 00 length
+  • [Airtable#465] In OOBE process, example video should located the time on 1:16
+  • [Airtable#468] [thumbnail editor] after edit should back to family album not single photo view
+  • [Airtable#470] "Sign in pixsee" didn't translation to Chinese "登入pixsee"  when the setting is Chinese
+
+[Other Fixed]
+  • Baby Monitor
+    [Video Record]
+      - After record video during back to home by button view the app is closed
+      - The app is closing after a deletion of a video recently recorded
+    [Voice Record] 
+      - Play on Pixsee button is displayed incorrectly on the Baby Room - voice tab
+    [Scheduling Play] 
+      - When the user taps on the number of playing times on the landscape screen, the app is closing
+    [Precious Moment] [Special Cards] 
+      - The age and holiday cards are not filling the frame
+    [Settings] 
+      - Screen will not recover when device changes wifi network
+    [OOBE] 
+      - Added a verification o setup successfully screen to avoid change password when user is only changing the wifi settings
+
+/********************************+
  Version: 9.37.12
  Date: October 24, 2020
-+********************************/
+ ********************************/
 [CR & Features]
   • [Airtable#436] In select mode of event history, trigger-“selected” area 
                    should be the whole item
