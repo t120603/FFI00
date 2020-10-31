@@ -1,0 +1,12 @@
+/***************************
+ Version: 1.12.5
+ Date: August 25, 2020
++***************************/
+
+[Modification]
+  - [event]
+     . cancel the filter that skip the 'future' event pushed by device 
+
+[Fixed Issues]
+  - fixed an issue on offset of uploaded photos by Android app
+  
