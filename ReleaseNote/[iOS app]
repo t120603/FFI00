@@ -1,0 +1,22 @@
+/************************+
+ Version: 1.0.12 (157)
+ Date: October 31, 2020
++*************************/
+
+/************************+
+ Version: 1.0.12 (156)
+ Date: October 23, 2020
++*************************/
+[CR / Features]
+  • Voice record/management
+    o Implemented the voice recording amplitude animation
+    o Empty list message is visible when user has records listed
+    o Change the swipe animation in order to get just like the event history animation
+    o Duplicated audio files
+    o Change voice recording time notation
+    o Don’t allow user to save an audio file with empty title
+    o Audio is recording even before user approves the microphone usage 
+    o Voice Record shouldn't be available on soothing music
+  • Photo thumbnail editor
+    o Fixed saving bug
+    
