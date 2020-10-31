@@ -1,0 +1,15 @@
+/****************************
+ Version: 0.003.46
+ Date: Ooctober 30, 2020
++****************************/
+This build is RC1 for production 1.003.00
+
+[Modification]
+  - [IOTC] add query music file list API
+  - [SecureIC] add re-try for i2c bus error
+  - [Download] increase filename buffer for download APIs
+  - [China SKU] dynamic switch: URL(cloud/OTA/kpns), model, NTP server, ping server
+
+[Fixed Issues]
+  - [Bugzilla#557] [ITC7][Sprint1][iOS] Noise can be heared when device is on mute
+
