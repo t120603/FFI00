@@ -1,0 +1,50 @@
+/********************************+
+ Version: 9.37.12
+ Date: October 24, 2020
++********************************/
+[CR & Features]
+  • [Airtable#436] In select mode of event history, trigger-“selected” area 
+                   should be the whole item
+  • [Airtable#443] [voice record] Should only keep 1 item's action button 
+                   drawed at 1 time
+  • [Airtable#444] [event history] swipe left an item should collapse others
+  • [Airtable#445] [voice record] swipe left/ long press an item should 
+                   collapse others
+  • [Airtable#452] [Scheduling Play] background of plan picker should be green
+  • Change playback timeline step from 1 minute to 20 seconds:
+    - We were able to fix the last described problem that happened in some 
+      devices and could reach a desirable result with 20 seconds stepping;
+
+[Fixed Issues]
+  • [Airtable#428] Crying feedback always report "uncomfortable"
+  • [Airtable#441] [voice record] edit item's name, landscape mode can't 
+                   trigger keyboard
+  • [Airtable#448] [voice record] The wave on recording needs to be faster 
+                   in visual
+  • [Airtable#451] [Scheduling Play] default trigger time is not correct
+  • [Airtable#453] [Scheduling Play] content page didn't allow landscape
+  • [Airtable#454] In select mode of event history, should block swipe left/ 
+                   long press function
+
+[Other Fixed]
+  • [Background Play][Event History] When the user mutes the event history
+    video the background is not;
+  • The tap on the back button after closing a playing video is closing the 
+    background audio;
+  • [Thumbnail editor] Update thumbnail covers when changing a thumb;
+
+[Known Issues]
+  • Thumbnail editions sync between platforms
+    - We are discussing with iOs team to try to reach to a solution;
+  • Retry dialog always shows after changing Wi-Fi settings;
+    - We are still trying to figure out the problem;
+  • Can’t play voice recording on device;
+    - Still waiting for a device FW solution, the latest temporary image 
+      sent by Liz didn’t work;
+  • Play on pixsee voice recording button size is different between devices;
+  • Voice recording create screen layout does not shows correctly when 
+    entering it on landscape mode;
+  • Some devices are crashing after watch an event history video and then 
+    going back;
+  • Some devices are crashing while trying to upload a video;
+
