@@ -1,7 +1,29 @@
 /*****************************
+ Version: 1.13.1-rc.1
+ Date: November 4, 2020
+ *****************************/
+[Modification]
+  • add simplified Chinese context
+  • add email templates in simplified Chinese
+
+/*****************************
+ Version: 1.13.0-rc.2
+ Date: October 26, 2020
+ *****************************/
+[Modification]
+  • 完成同步special card文字內容(僅milestone, age) api
+  • 新增國家及時區for China
+  • Admin啟用新使用者api
+  • 裝置ota完成時回報版本加入硬體版號
+[Fixed Issues]
+  • 變更縮圖API加上變更時間
+  • 同步照片api加上縮圖名稱
+  • 修正驗證註冊bug
+
+/*****************************
  Version: 1.12.5-rc.14
  Date: September 21, 2020
-+*****************************/
+ *****************************/
 [Modification]
   • endpoint [POST]/storages/ov 
     /* upload video file (only for app) */
