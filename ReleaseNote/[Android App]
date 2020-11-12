@@ -1,4 +1,43 @@
 /********************************+
+ Version: 10.38.6
+ Date: November 12, 2020
+ ********************************/
+{CR & Features}
+  • [airtable#457] Mute hint didn't according to device
+  • [airtable#476] string update from previous cry in English, Chinese & Simplified Chinese
+  •	[FFI00/China] Special card - Holiday for China;
+  •	[FFI00/China] Implemented partial support to generate code for Chinese version only
+
+{Improvement}
+  •	Added more logs to the application;
+
+{Fixed Issues}
+  • [airtable#453] [Scheduling Play] content page didn't allow landscape
+ 
+{Other Fixes}
+  •	[Subscription][Upload] After the user subscribes by the upload photo screen, the user keeps locked on the screen;
+  •	[Event History] The events remain on the Event History after being deleted;
+  •	[Baby Monitor] The mute state is not returning to the previous state after the tap on the 2-way talk;
+  •	App is crashing after recording a video and accessing the Family Album by the button on the Timeline;
+  •	[Event History] Event hour is inconsistence on the menu and on the video;
+  •	[Precious Moment][Delete media] After the deletion of the photo in full view the user is directed to the wrong screen;
+  •	[Baby Monitor] The Live Streaming's audio is listened to on other screens despite the 'play background' is set to off;
+  •	[Baby Monitor] Pixsee icon is not displayed correctly at the last cover;
+  •	[Voice Recording] When the user accesses the recording screen on landscape mode;
+  •	[Playback] Keep playback timeline up to date with current system time;
+  •	[Playback] The timestamp of capture photo / record video on playback is wrong;
+  •	[Playback] Events being drawn outside of playback component;
+  •	[Live Streaming] Live name on the traditional Chinese language is out of the red area in full view mode;
+  •	[Timeline] Go-to-top animation is not correct all the time;
+  •	[Baby Monitor] UI on the Home screen is broken when the app is launching with the device in landscape mode;
+  •	[Baby Monitor][Playback] The loading on the playback is displayed wrongly;
+  •	After the note is added on a video the notes on the photos are displayed incorrectly;
+
+{Known Issues}
+  •	User profile picture on the media note is being cut;
+  •	Error while trying to upload a video on some Android 7.1.1 devices; 
+
+/********************************+
  Version: 9.37.17
  Date: October 31, 2020
  ********************************/
