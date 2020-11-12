@@ -1,4 +1,36 @@
 /*************************
+ Version: 1.0.12 (158)
+ Date: November 12, 2020
+ *************************/
+{Fixed Issues}
+  •	[Airtable#233] - New toast (fix the toast color)
+  •	[Airtable#240] - Fail to share more than 5 photos with Line app
+  •	[Airtable#257] - Update chinese strings for the crying feature
+  •	[Airtable#260] - Crop isn't following AI crop data when open thumbnail editor for the first time
+    o	We are still having some troubles when user edits the photo on android to open the photo's thumbnail on the corrected position, and the same occurs when user edits on ios and opens it on android
+  •	[Airtable#261] - Password rules checkpoints element has broken it's layout
+  •	[Airtable#230] - The unread ring of Cover won't disappear even we tap it explicitly or scroll over the photos inpliedly
+  •	[Airtable#243] - Change the background play symbol
+    o	Symbol cannot be removed from the lock screen, and we can not always back to home screen, it will always back to the page before user puts the app on background or lock the screen
+    o	Known issue: if user unmute the app, enable the background play and lock the screen, when he gets back to the app and mute the streaming, if he puts the app on the background, the microphone symbol will not disapear
+  •	[email]: Hide temporary the third card from the subscription page
+  •	[email] App is closing after user saves a family's album video on his iPhone
+  •	Error pop up when we try to reproduce a shared video with Line app
+  •	[Airtable#241] Video lost it's sound after shared to line from family album  
+  •	Free Trial (still needs the backend to provide us the trial end period, please check the e-mail: [FFI00] iOS trial period)
+  •	[Airtable#262] Environment detection can't save setting
+  •	[Airtable#131] Relationship field in OOBE has no default value (default: “mommy”)
+  •	[Airtable#254] Photo is saved with the current time, even though user takes it in other playback's time
+  •	Update Notification String in order to use the baby's name
+  •	[email] Update endpoints to query locations/ timezones
+  •	[Bugzilla#605] After delete an event video on full screen, app crashed (cannot tap anything)
+
+{Tasks for China SKU}
+  •	Strings / Nation/ Timezone
+  •	Disable subscription
+  •	[e-mail] Update endpoints to query locations/ timezones
+
+/*************************
  Version: 1.0.12 (157)
  Date: October 31, 2020
  *************************/
