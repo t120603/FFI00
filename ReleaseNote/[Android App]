@@ -1,4 +1,45 @@
 /********************************+
+ Version: 10.39.6
+ Date: November 26, 2020
+ ********************************/
+{CR & Features}
+  •	Disabled change password flow on non-Chinese version;
+  •	[ FFI00 / Strings ] Update the wording for China;
+  •	[ FFI00 / China ] Disable subscribe action and button + free trial UI changes;
+    --	Still need the cloud side;
+  •	[ FFI00 / China ] Integrated Baidu location SDK;
+    --	Still waiting for the Chinese server endpoints to test country listing and distance calculation for Baby Profile screen on OOBE;
+  •	[ FFI00 / China ] Implement a structure that allows the app to have different code and configuration for China market;
+  •	[ FFI00 / China ]  Updated strings for simple and traditional Chinese;
+  •	[ FFI00 / China ] Integration of the JPush notification SDK
+
+{Improvements}
+  •	Added more logs for TUTK context;
+  •	Code cleaning (removing old solutions already removed from scope);
+
+{Fixed Issues}
+  • [airtable#477] Unable to zoom in/out during live streaming
+
+{Other fixed}
+  •	[Baby Monitor][Live Streaming] Zoom is not returning to 1x when recording a video on the Live Streaming;
+  •	Fixed long wait after locking/unlocking phone on Family Album;
+  •	[Precious Moment][Delete media] After the deletion of an unload media the loading is displayed over the new media displayed;
+  •	[Baby Timeline] There is no thumbnail's transition on the first cover;
+  •	Rebind issue;
+  •	[Precious Moment][Family Album] The app is crashing when accessing the Family Album by button at the top of the Timeline screen;
+  •	Video is downloaded to the smartphone gallery after shared it;
+  •	[Baby Monitor][Event History] The toast is not displayed correctly after deletion of an event history video;
+  •	Fixed wrong redirect after finishing editing thumbnail;
+  •	[Home] Gap in line after drag down in cover on home screen;
+  •	[Precious Moment] There is a little bit of difference in the line's thickness on the Home screen and Baby Timeline screen;
+  •	Fixed issue where gallery wasn't loading all medias;
+  •	Gallery isn't returning to correct date;
+  •	[Baby Care][Chinese] When changing the device's language to Chinese, it's displayed the current date and hour, not the date and hour of the latest cry;
+
+{Konwn issues}
+  •	Some DVTs are not connecting the streaming for more than one user at a time;
+
+/********************************+
  Version: 10.38.6
  Date: November 12, 2020
  ********************************/
