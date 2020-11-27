@@ -1,4 +1,15 @@
 /****************************
+ Version: 1.003.01
+ Date: November 14, 2020
+ ****************************/
+{Fixed Issues}
+  - [FQA] fix FQA test key error
+
+<note>
+  1. Modify FQA button test tool, this change won’t impact others.
+  2. Add FQA test case into RD unit test process.
+
+/****************************
  Version: 0.003.47
  Date: November 4, 2020
  ****************************/
