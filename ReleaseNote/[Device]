@@ -30,7 +30,261 @@ This build is RC1 for production 1.003.00
   - [SecureIC] add re-try for i2c bus error
   - [Download] increase filename buffer for download APIs
   - [China SKU] dynamic switch: URL(cloud/OTA/kpns), model, NTP server, ping server
+                *note1* switch depends on detecting GPIO setting
+                *note2* URL is still under working
 
 [Fixed Issues]
   - [Bugzilla#557] [ITC7][Sprint1][iOS] Noise can be heared when device is on mute
 
+/****************************
+ Version: 0.003.45
+ Date: October 22, 2020
+ ****************************/
+[Modification]
+  - [TUTK] change av token process and default av token
+  - [HWID] HW ID (SKU) implementation
+  - [Playback] report playtime timestamp to App
+
+[Fixed Issues]
+  - enable internet monitor as early as possible
+  - add WiFi/Factoryreset key function in connecting state
+
+/****************************
+ Version: 0.003.44
+ Date: October 14, 2020
+ ****************************/
+[Modification]
+  - [System] Improve copy file performance
+  - [QRSCAN] add factory reset key and LED control
+  - [IoT Hub] (temporarily) disable IoT Hub connection
+
+[Fixed Issues]
+  - fix failed to delete jpeg after upload to cloud
+
+/****************************
+ Version: 0.003.43
+ Date: October 8, 2020
+ ****************************/
+[Modification]
+  - [Azure] Register IoT id to pixsee cloud
+  - [IOTC] add download/delete/query IOTC command
+  - [IOTC] new IOTC command to get/set volume
+  - [SecureIC] read id for Azure
+  - [Camera] implement snapshot/IOTC and upload
+  - [Cloud] update device SW version and AI version to pixsee cloud
+  - [Audio] MP3 player implementation 
+
+/****************************
+ Version: 1.002.02
+ Date: October 8, 2020
+ ****************************/
+[Modification]
+  - [Bug Fix] Disable upload during switch to night mode, to avoid capture purple picture. 
+
+/****************************
+ Version: 0.003.42
+ Date: September 30, 2020
+ ****************************/
+[Modification]
+  - [Event] add temperatureUnit in KPNS and enent history
+            temperatureUnit
+                0: Celsius; 
+                1: Fahrenheit;
+  - [IOTC] add request download files API
+  - [SecureIC] modify Read_cei_store_data
+  - [SecureIC] update library version to 3.2.2 for mbedTLS
+  - [Audio] adjust volume keys behavior and change Max volume sound
+
+[Fixed Issues]
+  - configure IQ when camera streaming is turned on
+
+/****************************
+ Version: 0.003.41
+ Date: September 25, 2020
+ ****************************/
+[Note]
+  - add debug tool in device, and it can set debug flag (no need to set flags 
+    manually).
+    EX> DebugMode.sh staging
+        # DebugMode.sh
+          Debug options: OOBE|STAGING|OTA|STRESS|VNOENCRYPT|CLEAR|WIFI
+                OOBE ==> Skip OOBE
+                STAGING ==> Change to staging server.
+                OTA ==> Force OTA download in boot up
+                STRESS ==> Enable Stress test
+                VNOENCRYOT ==> Disable video encrypt
+                CLEAR ==> Clean debug flags
+                WIFI ==> Reboot to wifi scane mode
+
+[Modification]
+  - [Audio] add button sound and quick mute
+  - [Audio][LED] implement audio-out/LED simple HAL
+  - [TUTK][KPNS] "isCelsius" index in customized payload
+
+[Fixed Issues]
+  - fix playback still image
+  - prevent purple picture during switching night mode
+  
+/****************************
+ Version: 0.003.40
+ Date: September 17, 2020
+ ****************************/
+[Note]
+  - add debug tool in device, and it can set debug flag (no need to set flags 
+    manually).
+    EX> DebugMode.sh staging
+        # DebugMode.sh
+          Debug options: OOBE|STAGING|OTA|STRESS|VNOENCRYPT|CLEAR|WIFI
+                OOBE ==> Skip OOBE
+                STAGING ==> Change to staging server.
+                OTA ==> Force OTA download in boot up
+                STRESS ==> Enable Stress test
+                VNOENCRYOT ==> Disable video encrypt
+                CLEAR ==> Clean debug flags
+                WIFI ==> Reboot to wifi scane mode
+  - change encode(jpeg/streaming) behavior, please help to check if any issues.
+  - re-implement input(key) driver/service, please help to check if any issues.
+
+[Modification]
+  - [DebugMode] DebugMode setting tool
+  - [CRY] Extend cry record file to 10 seconds.
+  - [Camera] Sigmastar MMA's patch
+  - [Camera] Balance MMA heap 0/1 usage
+  - [Camera] Dynamic video streaming VENC control.
+  - [Key/Input] Input service implementation.
+  - [Key/Input] Key driver re-implementation.
+  - [Schedule Play]Add schedule play function & api.
+  - [OPT] Add EXIF make/model name
+
+[Known Issues]
+1. No event records. After checking logs, vsaas server didn’t pull videos. It 
+   should be vassainfo or server issue. APK: pixsee-mp9.35.4_beta.apk
+2. Can’t playback recording video. Roll-back to FW 0.003.39, it still can’t 
+   playback recording video. Keep analyzing. APK: pixsee-mp9.35.4_beta.apk
+
+/****************************
+ Version: 1.002.00 (0.003.39)
+ Date: September 1, 2020
+ ****************************/
+[Modification]
+  - [HW Key] remove key sound beep_play
+
+/****************************
+ Version: 0.003.38
+ Date: August 27, 2020
+ ****************************/
+[Modification]
+  - [TUTK] re-write vsaasinfo just in case
+  - [Wi-Fi][Scan] disable wifi scan mode to normal mode if device power reset
+  - [Key][Wi-Fi] block "wifi reset" key in OOBE/WiFi scan mode
+  - [SYSTEM] change rootfs all permissions as rootfs
+  - [NTP] daily ntp time sync
+
+[Bug Fixing]
+  - [bugzilla#492/#493] fix 2-way talk and volume key sound bug
+                     => turn off beep_play & add delay before music_play
+
+/****************************
+ Version: 0.003.37
+ Date: August 20, 2020
+ ****************************/
+[CR]
+  - [Security][TUTK] remove default token.txt and generate to /data/folder
+  - [Security][TUTK] save TUTK password/authkey in secureIC
+
+[Modification]
+  - [Staging] add staging server clientId/clientSecret
+  - [Recording] add I-frame millisecond for av sync
+        /* note */
+        if device upgraded from OTA, it takes 24 hours to override all
+        the old recorded video files
+  - [OPT] fixed EXIF ISO value incorrect
+
+[Bug Fixing]
+  - [bugzilla#492/#493] fix 2-way talk and volume key sound bug
+
+/****************************
+ Version: 0.003.36
+ Date: August 14, 2020
+ ****************************/
+[Modification]
+  - [Setting] fix config file size return error
+  - [Staging] fix staging server URL
+  - [Cry][Detection] use timestamp from server as event time
+  - [OPT] night mode IQ fine tune
+  - [IOTC] fix TH & Danger Zone interval resp which is outside the expected 
+           range
+  - [Audio] add volume key sound
+  - [Audio] fix no volume sound up & down when play music & 2-way talk
+  - [Audio] fix can't turned volume up & down when playing music
+  - [System] add debug cfg for unencrypted video
+  - [Camera] default resolution to FHD
+
+/****************************
+ Version: 1.001.00 (0.003.35)
+ Date: July 30, 2020
+ ****************************/
+[CR]
+   - [OPT] night mode IQ AE target 450
+
+ [Modification]
+- [JPEG][upload] fix re-upload path & remove incomplete file
+   - [OTA] fix OTA timer incorrect
+   - [IOTC] fix DEVINFO sdcard usage
+   - [System] optimizing compiler cflag
+   - [Audio] stop send audio frame while speaker on (2-way talk)
+   - [Wi-Fi] increase password buffer
+   - [Debug] configure TUTK log limit to 10x10 MB
+[Bug Fixing]
+   - [bugzilla#478] [ITC7][FST_Reg] audio/video is unsynchronized for 24 hours video recording playback
+                  => modify a/v timestamp, modify audio max offset
+                  => modify recording base to 3mins
+   - [bugzilla#484] [ITC7][MR1] DUT do not change the sensitivity for area detection immediately after user save the changes from app
+   
+/****************************
+ Version: 0.003.34
+ Date: July 24, 2020
+ ****************************/
+
+[Note]
+  - Due to encrypted method changed, all 24-hour AV recording files will be clear after OTA upgrade
+
+[CR]
+  - staging environment
+  - modify crying, humidity and temperature detection default settings
+  - [notification] convert Celsius/Fahrenheit to payload
+
+[Modification]
+  - [Audio] modify stop recoding file time
+  - [Music] fix memory leakage
+  - [Wi-Fi] extend Wi-Fi time out to 45 seconds
+  - [OTA] add pre/post OTA script
+
+[Bug Fixing]
+  - [bugzilla#392] [IOT][Audio] Noise when live view and speaker on v0.1(96)/FW3.19
+  - [bugzilla#444] [IOT][Audio][Android] Noise when Mute off and playing smart smoothing music. v1.0
+  - [bugzilla#478] [ITC7][FST_Reg] audio/video is unsynchronized for 24 hours video recording playback
+               ==> encrypt I frame, remove encrypted recording folder
+
+/****************************
+ Version: 0.003.33
+ Date: July 17, 2020
+ ****************************/
+[Note]
+  - 0.003.33 is a hotfix of 0.003.32 by resolving a critical issue on failed to play message alert tone after QR code scan
+[CR]
+   - add notification interval and VAD db_threshold API
+
+ [Modification]
+   - [AV sync] modify offset and timestamp
+   - [OTA] add version file in package
+   - [OTA] fix OTA status sync and add error handle
+   - [Audio] turn on AEC function when playing music files only
+   - [Network] enable iperf for testing
+   - [Photo][Upload] add face parameter if body only
+   - [System][Performance] remove useless delay
+   - [OPT] night mode IQ fine tune
+
+ [Bug Fixing]
+   - [bugzilla#425] [ITC7][FST] Humidity/Temperature notification interval is not meet requirement. (current interval is 6 minutes)
+                  => modified temperature and humidity sensor use same timer
