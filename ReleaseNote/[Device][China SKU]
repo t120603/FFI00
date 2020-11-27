@@ -1,0 +1,15 @@
+/****************************
+ Version: 2.000.00
+ Date: November 18, 2020
+ ****************************/
+2.000.xx will used for staging environment; firmware for production will start from 2.003.01
+
+{Features}
+  - [China SKU] Add China OTA URL
+  - [China SKU] China SKU software switch for testing.
+  - [HWID] Change China HW ID setting from 0 to 6.
+
+<note>
+use command to switch SKU setting on non-China SKU device.
+Before OOBE, login device and execute below command.
+~# DebugMode.sh CHINASKU
