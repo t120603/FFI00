@@ -1,4 +1,30 @@
 /*************************
+ Version: 1.0.12 (160)
+ Date: November 27, 2020
+ *************************/
+{Fixed Issues}
+  •	[Airtable - 272] Thanksgiving card is not generated
+  •	Update China strings
+  •	[Airtable - 269] Holiday & age cards opened from the timeline, are opened in edit mode. Should be in view mode.
+  •	[E-mail] App version 158 associated with device versions (1.000.00 or 1.002.00) are sending an unexpected temperature notification
+  •	[E-mail] change TUTK default password on latest device FW only
+  •	[E-mail - background play] Background play symbol should still be visible when user mutes the streaming
+  •	[E-mail - background play] The background play should resume when user receives a phone call
+  •	Timezone is not selected at the setup's end
+  •	[E-mail] IOS 14 - layout is still wrong in one page: after confirming the code sent by e-mail when user changes the password
+  •	[Airtable - 264]Page is not loading Chinese strings
+  •	China holidays
+  •	[Airtable - 255] Change stop button layout
+  •	[Airtable - 236] Incorrect single photo view layout on landscape
+  •	[Airtable - 202] Operating problems in event history video playing 
+  •	[E-mail] Wi-Fi settings error handling: Wi-fi name field is now completed with the current wi-fi’s name when user cancel the Wi-Fi setting
+  •	[Airtable-189] Default image’s position should be the center of image
+  •	[Airtable-243] Wrong panel for Audio Background play
+
+{Known Issues}
+  •	family's album video is not played on landscape mode
+
+/*************************
  Version: 1.0.12 (158)
  Date: November 12, 2020
  *************************/
