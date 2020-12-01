@@ -1,4 +1,18 @@
 /********************************+
+ Version: 10.39.8
+ Date: November 30, 2020
+ ********************************/
+{CR & Features}
+  •	[FFI00 / China] Integrate Baidu Analytics
+
+{Other Fixed}
+  •	[Precious Moment][Live Streaming] The Live Streaming buttons are not recovered after losing connection and reconnecting to internet again while recording a video;
+  •	Fixed issue when the Wifi list is not displayed when device location isn't active;
+  •	Fixed issue where device location wasn't updated on content screen
+  •	Fixed JPush dependency issue on TW version for production;
+  •	Fixed issue where device location wasn't being updated on pixsee settings after device lang changed;
+
+/********************************+
  Version: 10.39.6
  Date: November 26, 2020
  ********************************/
