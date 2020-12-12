@@ -1,4 +1,26 @@
 /********************************+
+ Version: 10.40.9
+ Date: December 12, 2020
+ ********************************/
+{CR & Features}
+  •	[PIXM02][App] TUTK CN VSaaS API updates;
+{Other Fixed}
+  •	Change chinese variant according to device language configuration so the cloud can list the correct country list;
+
+/********************************+
+ Version: 10.40.5
+ Date: December 8, 2020
+ ********************************/
+{CR & Features}
+  •	[PIXM02] Integrated Chinese SKU prod cloud endpoints and tokens
+{Other Fixed}
+  •	[Precious Moment][family album] Video is downloaded to the smartphone gallery when sharing it;
+  •	User Profile and Baby Profile picture are being switched to a different one while editing it;
+  •	Fixed issue where GPS is required to be active to list WiFi;
+  •	User Profile and Baby Profile avatar is blinking when returning from Special Cards accessed by the drawer menu;
+  •	Fixed performance issues on Special Cards lists;
+
+/********************************+
  Version: 10.39.8
  Date: November 30, 2020
  ********************************/
