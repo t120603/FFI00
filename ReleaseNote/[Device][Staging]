@@ -1,4 +1,38 @@
 /****************************
+ Version: 0.003.48
+ Date: December 10, 2020
+ ****************************/
+{CR & Features}
+  - [Snapshot] Add LED, fixed upload timestamp +0 and GMT offset (configuration from APP).
+  - [LED] Add Snap capture white LED.
+  - [Face AE] Enable Face AE function
+  - [Azure] Implement PnP interface
+    1) DTDL file : https://github.com/Azure/iot-plugandplay-models/tree/main/dtmi
+    2) modify libparson (signal 11 with json-c)
+  - [CR][CryDetect] record 5 seconds of crying audio clip for crydetection/recognition  
+  - [AI] Integrate new small obj API.
+    1) Add small object detect model
+    2) Modify library for small object detect
+
+{China SKU}
+  - Update KPNS/Kota URL.
+  - Add China OTA URL.
+  - China SKU software switch for testing.
+
+{Fixed Issues}
+  - [Event Recording] Fix token inconsistent after OTA.
+  - [OTA] Fine tuning first OTA timer.
+  - [Camera] Remove dummy day/night mode switch.
+  - [HWID] Change China HW ID setting from 0 to 6.
+  - [FQA]Remove key_test_led
+  - [FQA] Fix FQA Test key test error.
+  - [SecureIC] Added thread lock when access secure ic.
+
+{Known Issues}
+  - After turn off LED through IOTC, LED can’t turn on.
+  - 5M Capture upload timestamp is not GMT+0 for cloud.
+
+/****************************
  Version: 1.003.01
  Date: November 14, 2020
  ****************************/
