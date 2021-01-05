@@ -1,4 +1,13 @@
 /****************************
+ Version: 0.003.49
+ Date: December 24, 2020
+ ****************************/
+{CR & Features}
+  - [Snapshot] IOTC command for timer 5M capture
+  - [Snapshot] Fix upload offset as +00:00
+  - [LED] fix IOTC LED control failure
+
+/****************************
  Version: 0.003.48
  Date: December 10, 2020
  ****************************/
