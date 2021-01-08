@@ -1,0 +1,15 @@
+/********************************+
+ Version: 10.40.10_cn
+ Date: December 15, 2020
+ ********************************/
+{Fixed Issues}
+  •	•	Fix crash on Event History due to different binding server url format on CH SKU
+
+/********************************+
+ Version: 10.40.9_cn
+ Date: December 12, 2020
+ ********************************/
+{CR & Features}
+  •	[PIXM02][App] TUTK CN VSaaS API updates;
+{Other Fixed}
+  •	Change chinese variant according to device language configuration so the cloud can list the correct country list;
