@@ -1,4 +1,14 @@
 /****************************
+ Version: 0.003.50
+ Date: January 15, 2021
+ ****************************/
+{CR & Features}
+  - [Voice play] Add download thread and new Music APIs.
+  - [AZURE] Enable Azure IOT connection.
+  - [Voice play] Implement auto query/download voice file.
+  - [Sleep] Implement sensor thread sleep mode
+
+/****************************
  Version: 0.003.49
  Date: December 24, 2020
  ****************************/
