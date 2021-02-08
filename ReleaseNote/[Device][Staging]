@@ -1,6 +1,6 @@
 /****************************
  Version: 0.003.52
- Date: Febuary 9, 2021
+ Date: Febuary 8, 2021
  ****************************/
 
 [Features]
@@ -11,6 +11,13 @@
 [Fixed Issues]
   -- remove non default music (e.g. recorded voice files) when factory reset
   -- [Record Voice] error handling for downloading failure
+
+/****************************
+ Version: 0.003.51
+ Date: January 29, 2021
+ ****************************/
+{CR & Features}
+  - [Voice/Music play] Music play duration implementation.
 
 /****************************
  Version: 0.003.50
