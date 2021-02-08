@@ -1,4 +1,18 @@
 /****************************
+ Version: 0.003.52
+ Date: Febuary 9, 2021
+ ****************************/
+
+[Features]
+  -- implementation of ‘sleep mode’
+     a) modify video stream and audio stream
+     b) implement command for go-to sleep through Azure IoT command
+     c) upgrade configures for sleep mode
+[Fixed Issues]
+  -- remove non default music (e.g. recorded voice files) when factory reset
+  -- [Record Voice] error handling for downloading failure
+
+/****************************
  Version: 0.003.50
  Date: January 15, 2021
  ****************************/
