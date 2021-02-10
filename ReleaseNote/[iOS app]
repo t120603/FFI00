@@ -1,4 +1,24 @@
 /*************************
+ Version: 1.0.17 (175)
+ Date: Febuary 9, 2021
+ *************************/
+{Features}
+  -- voice record
+    ** still some known issues that is working on resolving
+{Known issues on voice record}
+(a) problems on soothing music feature if user chooses a voice recording audio
+    -- in this case, if user hasn't played the record on pixsee, app is not able to make
+       device download this record
+    -- the cry detection updates are not saved if user chooses a voice recorder to
+       play nor the voice name is shown next to the "music" option at cry detection screen
+(b) when the record fails to upload due to a Wi-Fi problem, when user retries the
+    upload, it's always failed, so user can't add more voice recorders due the
+    business rule where the "add" button should be disable while there is an audio 
+    file whose upload has failed
+(c) due these bugs, app still can't test the "delete a voice record that has been used
+    by the soothing feature" scenario
+
+/*************************
  Version: 1.0.12 (160)
  Date: November 27, 2020
  *************************/
