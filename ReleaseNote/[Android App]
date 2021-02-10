@@ -1,4 +1,36 @@
 /********************************+
+ Version: 11.42.24
+ Date: Febuary 9, 2021
+ ********************************/
+{Features & CRs}
+  -- [SPRINT2] voice record
+  -- [SPRINT2] manually capture
+  -- [Special Card] new Chinese holidays dates
+  -- China pixseecare pages links
+  -- [PIXM02] remove subscription option and hide members menu option 
+  -- changes VSaaS get_contract_list parameters names
+  -- [PIXM01] needs to show Special Cards even a user missed the push notification (holiday/age event)
+  -- [PIXM01] URL for app -- remove the information icon & update the URLs
+  -- [Spec3.5.1] show the retry-discard popup when getting an error while trying to unbind
+  -- [Spec3.5.1] change notification messages
+  -- [Spec3.5.1] loading icon on Content Play items "play on device" button
+  -- start app on sign up screen at the first time instead of sign in screen
+{Fixed Issues}
+  - [airtable#481] 嬰兒房 didn't translate to simplified Chinese
+  - [airtable#482] China version app didn't receive any festival cards
+  - [airtable#483] Subscription links needs to correct
+  - [airtable#484] China version, festival “children's day” and "labour day" are out of order
+  - [airtable#485] Needs to show Special Card even a user missed the push notification (Holiday/Age event)
+  - [airtable#486] Need to update these URLs for China version
+  - it's not possible change password twice consecutive
+  - fixed an issue on special cards images were not being stored on cache
+  - user profile and baby profile avatar is blinking when returning from special cards accessed by drawer menu
+  - user profile and baby profile is being switched to a different one while editing it
+  - [OOBE] when the user accesses the "baby profile" screen for the first time, the "next" button is displayed enabled
+{Known Issues}
+  - [Voice Record] app is closing when user cancels an audio recording without an internet connection
+
+/********************************+
  Version: 10.40.9
  Date: December 12, 2020
  ********************************/
