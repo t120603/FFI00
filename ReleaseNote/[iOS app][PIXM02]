@@ -1,4 +1,12 @@
 /*************************
+ Version: 2.0.2 (9)
+ Date: Febuary 19, 2021
+ *************************/
+{Fixed Issues}
+  •	Hide voice record, scheduling play and Capture 5M features for firmware versions that doesn't support this features
+  •	URLs Global version updates when user is with "simplified Chinese" as main language
+
+/*************************
  Version: 0.1 (4)
  Date: December 16, 2020
  *************************/
