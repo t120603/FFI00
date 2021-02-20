@@ -1,4 +1,19 @@
 /****************************
+ Version: 1.003.03
+ Date: Febuary 20, 2020
+ ****************************/
+ -- [WIFI] Reduce WiFi power settings to meet FCC.
+ 
+ <note>
+This release is for US SKU, it is based on 1.003.02.
+Only modified WIFI power to meet FCC requirement.
+
+In the further, we will use dynamic WiFi power control by HW ID(sku).
+There is no need extra device firmware for US sku.
+Device firmware only have two versions: worldwide and China.
+The source code is still one main truck for worldwide and China, but build with different version number
+
+/****************************
  Version: 1.003.02
  Date: December 8, 2020
  ****************************/
