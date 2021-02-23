@@ -1,4 +1,66 @@
 /*****************************
+ Version: 1.14.1-rc6
+ Date: Febuary 23, 2021
+ *****************************/
+[Modification]
+  • Add Apple SSO, impact API as below
+    POST /authorization/check_auth/{thirdPartyName}
+    POST /authorization/check_email/{thirdPartyName}
+    POST /accounts/bind/{thirdPartyName}
+    POST /accounts/unbind/{thirdPartyName}
+
+  • Image compression
+    Note: whether image cropping is successful or not, the following image compress will be executed.
+
+  • Fixed bug / change by CEB feedback
+    a. remove response bind, and taskId field
+       GET /members/g/invitations
+    b. return the babies the user is guest
+       GET /members/g/babieslist
+    c. Separate displayName of members' permission to memberName and relationship
+       GET /members/g/permissions
+
+**** NOTE ****
+  • 目前正在調整cropping 與壓縮圖片的順序, 大約還要再一個半小時才會弄上 staging, 好了之後我會在發信通知
+  • 另外 Schedule play 因為要把 default music pre build進去, 需要到 2/26才能 release
+
+/*****************************
+ Version: 1.14.1-rc4
+ Date: Febuary 8, 2021
+ *****************************/
+[Features / Modification]
+  • WeChat SSO 相關API 
+    POST /authorization/check_auth/{thirdPartyName} Check userProfile
+    POST /authorization/check_email/{thirdPartyName} Check whether user has already registered by email or not
+    POST /accounts/bind/{thirdPartyName} Bind account with 3rd party
+    POST /accounts/unbind/{thirdPartyName} Unbind account with 3rd party
+    *note* 有關 Apple login (phase 1) 原定今天release , 但時程上來不及將API的測試做完所以需要延至 2/22才 release 到 staging 環境 
+ 
+  • MultiUser 下面幾個API已經完成 
+    Scenario 1: Admin gets invitation code, and invitee accept 
+                (Admin) Create invitation code 
+                POST /members/g/invitations
+                (Invitee) check invitation code 
+                GET /members/g/invitations/{invitationCode}
+                   Example:
+                   https://staging.ipg-services.com//api/v1/members/g/invitations/NDhkOTU5ZjEtNzhlYy00OTRhLTllNzQtYzM2Mjk0N2QzMjYwfE9EbGhOMlZrTUdVdFltUmlZeTAwT1dJNExXRXdZall0Tm1ZNVlqUXlNR0ZsWWpReQ==
+                (Invitee) accept invitation 
+                PUT /members/g/invitations
+ 
+    Scenario 2: (Admin) list invitation (exclude accept)
+                GET /members/g/invitations
+ 
+    Scenario 3: (Admin/Invitee) list babies
+                GET /members/g/babieslist
+ 
+    Scenario 4: (Admin) list members, and member’s permission
+                GET /members/g/permissions
+ 
+{Known issue & on-going item}
+  • DELETE /members (預計 2/22) 
+  • PUT /members/g/permissions (no require for phase 1)
+
+/*****************************
  Version: 1.13.1-rc.1
  Date: November 4, 2020
  *****************************/
