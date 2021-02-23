@@ -10,7 +10,7 @@
     POST /accounts/unbind/{thirdPartyName}
 
   • Image compression
-    Note: whether image cropping is successful or not, the following image compress will be executed.
+    Note: whether image cropping is successful or not, the following image compression will be executed.
 
   • Fixed bug / change by CEB feedback
     a. remove response bind, and taskId field
