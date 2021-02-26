@@ -1,4 +1,20 @@
 /*****************************
+ Version: 1.14.1-rc7
+ Date: Febuary 26, 2021
+ *****************************/
+[Modification]
+  • Add schedule play APIs
+    GET /schedule_play/profile      Query schedule play profile
+    POST /schedule_play/o           Create scheduling play plan
+    GET /schedule_play/o            Query schedule of play plan
+    PATCH /schedule_play/o/{sid}    Change scheduling play plan
+    DELETE /schedule_play/o/{sid}   Delete one scheduling play plan
+  • Modify GET /members/g/permissions
+    To return relationship code like DADDY or MOMMY for user to lookup  for multilingual
+[Fixed Issue]
+  • API /check_auth/apple
+
+/*****************************
  Version: 1.14.1-rc6
  Date: Febuary 23, 2021
  *****************************/
