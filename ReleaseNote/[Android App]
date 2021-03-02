@@ -1,4 +1,27 @@
 /********************************+
+ Version: 12.43.1
+ Date: March 1, 2021
+ ********************************/
+{Features & CRs}
+  -- [PIXM02][2.0.0] hide manually capture and voice record
+  -- [Voice record] for non-subscribed user, only play for 10 seconds.  (Device provides an API included length argument, APP could call it to control the playing length);
+{Fixed Issues}
+  • [airtable#486][PIXM02] Need to update these URLs for China version
+  • [airtable#488] In OOBE, information icon still appear, need to remove
+  • [airtable#489] Didn't display toast “the voice record is ready” after upload voice records
+  • [airtable#492] Maximum of voice record should be 120 second
+  • [airtable#493] Unsubscribe users could only play 10 seconds of voice record on pixsee device
+  •	[Baby Monitor][Voice Recorder] The app is closing when the user cancels an audio recording without an internet connection;
+  •	[Baby Monitor][Voice Recording] It's possible to record more than 50 audios;
+  •	[Baby Monitor][Manual Capture] When the user captures one photo and taps on the back button with the background play video activated, the live streaming is not displayed correctly;
+  •	[Area Detection] Wrong phrase on the discard modal of Area Detection screen;
+  •	[Area Detection] Discard settings modal is displayed when no action is performed by the user;
+  •	[Baby Monitor][Voice recording] It's possible to send an mp3 file to the pixsee cloud;
+  •	[Baby Monitor][Voice Recording] When the user records several audios, the audios are saved with the same name;
+  •	Strings synchronization with iOS;
+  •	[PIXM02][Hotfx] - Fix music play on china version;
+
+/********************************+
  Version: 11.42.24
  Date: Febuary 9, 2021
  ********************************/
