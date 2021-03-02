@@ -1,4 +1,18 @@
 /*************************
+ Version: 1.0.17 (177)
+ Date: March 1, 2021
+ *************************/
+{Fixed Issues}
+  -- [airtable#283] Delete voice record should be [delete] icon, not [un-sync] icon
+  -- [airtable#284] music button didn't resume to original icon after voice record played
+  -- [airtable#285] Maximum of voice record should be 120 second
+  -- [airtable#286] Unsubscribe users could only play 10 seconds of voice record on pixsee device
+  -- [airtable#288] Content description of voice record isn't correct
+{Known Issues}
+  -- Regarding the WeChat login and Apple Login, we still need some endpoints updates for this feature so we won't be able to delivery it tomorrow, as we had planned
+
+
+/*************************
  Version: 1.0.17 (176)
  Date: Febuary 19, 2021
  *************************/
