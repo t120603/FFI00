@@ -1,0 +1,32 @@
+1. [Owner] Share Device
+
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {deviceShare(email:"< Receiver mail>",device:"<device udid>",credential:"<base64({"av":"%s","ak":"%s","identity":"%s"})>")}'
+[respond]
+{"data":{"deviceShare":"ok"}}
+
+2. [Owner]Get Notifications:根據 訊 息 Owner可以 Cancel 訊 息
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer <Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'query {getNotifications(all:true) {sender,senderName,receiver,receiverName,type,description,pk,purpose,purposeDetail}}'
+[respond]
+{"data":{"getNotifications":[{"description":"esther_wei@tutk.com want to share device : esther with you.","pk":"<notification pk>","purpose":"<device udid>","purposeDetail":"esther","receiver":"5f6c39d08f4787ff4b299b66","receiverName":"Anomynous","sender":"5f28c35a7c978ff16ffabea5","senderName":"Anomynous","type":"DeviceSharing"}]}}
+
+* [Owner] Cancel Notification: Owner分享device之後，在receiverc還沒按操作之前，將這則通知移除
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer <Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {cancelNotification(id:"<notification pk>")}'
+[respond]
+{"data":{"cancelNotification":"ok"}}
+
+3. [Owner] Unshare Device: 移除對某帳戶的某設備的分享
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer <Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {deviceUnshare(account:"<receive account pk>",device:"<device udid>")}'
+[respond]
+{"data":{"deviceUnshare":"ok"}}
+
+4. [Owner]Clear Device Share: 移除某設備全部的分享
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer <Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {clearDeviceShare(device:"<device udid>")}'
+[respond]
+{"data":{"clearDeviceShare":"ok"}}
+
+
