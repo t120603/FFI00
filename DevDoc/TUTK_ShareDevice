@@ -1,3 +1,7 @@
+****
+Share Device -- Owner
+****
+
 1. [Owner] Share Device
 
 [request]
@@ -28,5 +32,57 @@ curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v
 curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer <Owner Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {clearDeviceShare(device:"<device udid>")}'
 [respond]
 {"data":{"clearDeviceShare":"ok"}}
+
+****
+Share Devices -- Receiver
+****
+1. [Receiver]Get Notifications: 根據訊息Receiver可以 Accept & Reject & Flush訊息
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'query {getNotifications {sender,senderName,receiver,receiverName,type,description,pk,purpose,purposeDetail}}'
+[respond]
+{"data":{"getNotifications":[{"description":"esther_wei@tutk.com want to share device : esther with you.","pk":"<notification pk>","purpose":"<device udid>","purposeDetail":"esther","receiver":"5f6c39d08f4787ff4b299b66","receiverName":"Anomynous","sender":"5f28c35a7c978ff16ffabea5","senderName":"Anomynous","type":"DeviceSharing"}]}}
+
+* [Receiver] Accept Notification
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {acceptNotification(id:"<notification pk>")}'
+[respond] {"data":{"acceptNotification":"ok"}}
+
+* [Receiver] Reject Notification
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {rejectNotification(id:"<notification pk>")}'
+[respond]
+{"data":{"rejectNotification":"ok"}}
+
+* [Receiver] Flush Notification 單純"沖"掉通知
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {flushNotification(id:"<notification pk>")}'
+[respond]
+{"data":{"flushNotification":"ok"}}
+
+2. [Receiver]Get Shared Devices 當receiver想知道有哪些設備分享給他
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'query {getSharedDevices {uid,udid,nickname,credential,owner}}'
+[respond]
+{"data":{"getSharedDevices":[{"credential":"","nickname":"esther","owner":"5f28c35a7c978ff16ffabea5","udid":"CBPUBX54Y9BMVH6GUHWJ","uid":"CBPUBX54Y9BMVH6GUHWJ"}]
+
+3. [Receiver]Get Shared Events == [Receiver]get_event_list: 當receiver 想拿到分享設備產生的event list
+[request]
+curl -XPOST -H 'Authorization: Bearer < Receiver Access Token >' -H 'Content-Type: application/json' -d 'query {getSharedEvents(device:"<device udid>",start_time:"1614750848000",end_time:"1614750858000",skip:0,limit:100){start_time,expires,start_time_ts,thumbnail}}' https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/
+[respond]
+{"data":{"getSharedEvents":[{"expires":"2021-03-10T05:54:08Z","start_time":"2021-03-03T05:54:08Z","start_time_ts":"1614750848000","thumbnail":"1614750848000"}]}}
+
+4. [Receiver]Remove Shared Device: Receiver移除分享
+[request]
+curl --location --request POST 'https://asia-vpapi-tutk-stg.kalay.us/vsaas/api/v1/be/' --header 'Authorization: Bearer < Receiver Access Token >' --header 'Content-Type: application/json' --data-raw 'mutation {removeSharedDevice(device:" <device udid>")}'
+[respond]
+{"data":{"removeSharedDevice":"ok"}}
+
+
+
+
+
+
+
+
 
 
