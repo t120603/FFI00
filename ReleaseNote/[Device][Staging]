@@ -1,8 +1,18 @@
 /****************************
+ Version: 0.003.53
+ Date: March 5, 2021
+ ****************************/
+[Features]
+  -- [Schedule_Play] Add download music machanism.
+  -- [Music] Fix player lock machanism.
+  -- [SD] Add SD/Music manager to leverage SD operation(move, download, clean)
+  -- [Schedule_Play] Modify play music timer.
+  -- [Azure] DPS Implementation
+
+/****************************
  Version: 0.003.52
  Date: Febuary 8, 2021
  ****************************/
-
 [Features]
   -- implementation of ‘sleep mode’
      a) modify video stream and audio stream
