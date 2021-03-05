@@ -1,4 +1,36 @@
 /*****************************
+ Version: 1.14.1-rc8
+ Date: March 5, 2021
+ *****************************/
+[Modification]
+  1.	Implement API PATCH /storages/o for hide/show files
+  2.	Implement API DELETE /members for delete member/unfollow baby
+  3.	modify GET /account/limit_info add registerSource field
+     App can use this to know the user comes from WeChat login or Apple login
+     For detail definition, you can check the swagger.
+  4.	Fix bug, User register from WeChat/Apple SSO can use POST /accounts/{openId} to update profile
+     Note: the API usage for SSO
+     API POST /authorization/check_email/{thirdPartyName}
+         For WeChat please use union id for accountSSO filed
+         For Apple please use sub for accountSSO filed
+         Ex.
+         {
+            “userEmail” : “omaca2@mail.x”,
+            “accountSSO” : “{unionId form wechat/ sub from Apple identify Token}”
+         }
+
+         You can get the unionId (WeChat) or sub (Apple) from response of API /POST /authorization/check_auth/{thirdPartyName}
+         Ex. you can get from the response accountSSO filed
+         {
+            “code” : 0,
+            “message” : “”,
+            “result” : {
+                “accountSSO” : “{unionId from wechat/ sub from Apple identify Token}”
+            }
+         }
+
+
+/*****************************
  Version: 1.14.1-rc7
  Date: Febuary 26, 2021
  *****************************/
