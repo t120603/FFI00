@@ -7,7 +7,7 @@
   -- [Music] Fix player lock machanism.
   -- [SD] Add SD/Music manager to leverage SD operation(move, download, clean)
   -- [Schedule_Play] Modify play music timer.
-  -- [Azure] DPS Implementation
+  -- [Azure] Getting Started Guide Implementation
 
 /****************************
  Version: 0.003.52
