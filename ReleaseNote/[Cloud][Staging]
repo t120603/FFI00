@@ -1,4 +1,18 @@
 /*****************************
+ Version: 1.14.1-rc10
+ Date: March 12, 2021
+ *****************************/
+[Modification]
+  1.	New API DELETE /members/g/invitations (problem#1)
+  2.	Bug fixed - Remove member/unfollow baby (problem#2, #4)
+  3.	Add response field latestNoteEditor on API GET /storages/s/{babyId} (problem #3)
+     Expect you can use the accountId (from latestNoteEditor) to get user name and avatar via API GET /accounts/limit_info
+     But for API GET /accounts/limit_info, it only returns the token owner’s data now.
+     We will add a new input filed “accountId” next Monday(3/15).
+  4.	Remove the API POST accounts/{openId} required rule of birthday field. (problem #6)
+  5.	Update email template, support china, and world wide
+
+/*****************************
  Version: 1.14.1-rc8
  Date: March 5, 2021
  *****************************/
