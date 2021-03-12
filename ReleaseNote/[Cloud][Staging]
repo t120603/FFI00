@@ -11,6 +11,7 @@
      We will add a new input filed “accountId” next Monday(3/15).
   4.	Remove the API POST accounts/{openId} required rule of birthday field. (problem #6)
   5.	Update email template, support china, and world wide
+  6. add avatar field on API GET /members/g/permissions, and fixed the bug about the name un-sync problem after modify user profile by API POST accounts/{openId}
   
   /* reference */
   https://docs.google.com/document/d/1wmM4-ftr3jEdRA7IecR23iuTJofKjc1Hoqoxh0WBDYc/edit 
