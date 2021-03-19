@@ -1,4 +1,16 @@
 /*****************************
+ Version: 1.14.2-rc2
+ Date: March 19, 2021
+ *****************************/
+  1.	Modify API GET /accounts/limit_info, app can use accountId parameter to get the avatar information for photo/video note.
+  2.	Add new invitation limit, the rule is existed members + inviting less than or equal to 5
+  3.	Create temp email for  invitee
+
+  {Known issue}
+  1.	When baby w/o bound any device, the invitee’s permission is empty (Admin can’t get the member’s permission via API GET /members/g/permissions)
+     We plan to fixed by next Wed. (3/24)
+
+/*****************************
  Version: 1.14.1-rc10
  Date: March 12, 2021
  *****************************/
