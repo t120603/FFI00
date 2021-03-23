@@ -1,4 +1,15 @@
 /****************************
+ Version: 0.003.55
+ Date: March 16, 2021
+ ****************************/
+[WiFi] Load NVRAM file and Config file by HWID.
+[AI] Integrate face SSD model, E183-th0.28
+[AI] Update body SSD model to E202.
+[Azure] Update DTDL to v2
+[Music play] Modify loop mode
+[Bug632] Fix incorrect WiFi mode LED.
+
+/****************************
  Version: 0.003.53
  Date: March 5, 2021
  ****************************/
