@@ -1,4 +1,24 @@
 /*****************************
+ Version: 1.14.2-rc3
+ Date: March 26, 2021
+ *****************************/
+Privacy Control:
+1.	Modify API POST /storages/o, add sn field for private control feature. (Cloud needs to know the sn and apply the privacy setting while photo upload)
+2.	Modify API POST /storages/od, add sn field for private control feature. (Cloud needs to know the sn and apply the privacy setting while photo upload from device)
+
+Permission Setting:
+1.	Modify API PUT /members/g/permissions, add permissionType for set member’s permission, 0 means Family album setting, 1 means deice setting
+2.	Modify API GET /members/g/permission, add avator field
+3.	New API GET /members/b/permission, let member get his own setting 
+
+Voice Record
+1.	Modify API POST /contents/o add babyId as required and remove required on sn 
+2.	Modify API GET /contents/o add babyId as query condition and remove accountId
+
+Bug
+1.	fix – baby w/o device binding will cause the failure on member’s permission generating.
+
+/*****************************
  Version: 1.14.2-rc2
  Date: March 19, 2021
  *****************************/
