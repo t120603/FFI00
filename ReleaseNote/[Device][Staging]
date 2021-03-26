@@ -1,4 +1,14 @@
 /****************************
+ Version: 0.003.56
+ Date: March 26, 2021
+ ****************************/
+[IOTC] Add real RSSI into IOTYPE_USER_IPCAM_GETWIFI_REQ
+[Azure] used low level api to improve CPU usage.
+[Bugfix] Fix error during shutdown.
+[Bugfix] [SD Manager] Fix SDManager stop after OTA check.
+[Bugfix] Add delay after play QR_code_scan_is_successful.
+
+/****************************
  Version: 0.003.55
  Date: March 16, 2021
  ****************************/
