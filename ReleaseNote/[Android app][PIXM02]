@@ -3,9 +3,9 @@
  Date: March 30, 2021
  ********************************/
 
-	•	complete push notification feature using JPush
- •	removed tutkLibPush completely
- •	fixed some small issues related to push notification
+ • complete push notification feature using JPush
+ • removed tutkLibPush completely
+ • fixed some small issues related to push notification
  
 /********************************+
  Version: 10.40.10_cn
