@@ -1,9 +1,18 @@
 /********************************+
+ Version: 2.0.2
+ Date: March 30, 2021
+ ********************************/
+
+	•	complete push notification feature using JPush
+ •	removed tutkLibPush completely
+ •	fixed some small issues related to push notification
+ 
+/********************************+
  Version: 10.40.10_cn
  Date: December 15, 2020
  ********************************/
 {Fixed Issues}
-  •	•	Fix crash on Event History due to different binding server url format on CH SKU
+  • Fix crash on Event History due to different binding server url format on CH SKU
 
 /********************************+
  Version: 10.40.9_cn
