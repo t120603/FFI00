@@ -1,4 +1,13 @@
 /*****************************
+ Version: 1.14.2-rc4
+ Date: March 31, 2021
+ *****************************/
+1. Modify API POST /schedule_play/o add babyId as required field
+2. Modify API GET /schedule_play/o for app, use babyId as query condition
+3. Add API GET /schedule_play/d for device, use sn to get schedule play list
+4. fix WeChat bug (feedback by Spencer {"code":10056,"message":"Third party account is invalid","result":null} )
+
+/*****************************
  Version: 1.14.2-rc3
  Date: March 26, 2021
  *****************************/
