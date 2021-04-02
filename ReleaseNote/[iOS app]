@@ -1,4 +1,38 @@
 /*************************
+ Version: 1.0.17 (180)
+ Date: April 2, 2021
+ *************************/
+{Features Modification}
+  •	Voice recorder feature
+  •	Strings translations updates
+
+{Fixed Bugs}
+  •	Airtable - 293
+  •	Airtable - 288
+  •	Airtable - 263 / Bugzilla - 595
+  •	Bugzilla - 648
+  •	Can’t upload the voice record file, it shows an error message
+  •	User should be redirected to the 3th card in the subscription screen
+  •	App closes when user tries to play for the first time a record in the pixsee device
+  •	In older iPhones like 6S and 5S, the app crashes when user records 2 audio files, one after the other and have the list almost full
+  •	The app crashes if in the 30th record, the user records an audio with 2 minutes longer
+
+{Known Issues}
+  •	We didn’t deliver the CR where we should update the voice record icon, because we need the “first using tips” animation with the new icon, so in order keep the consistence, we will implement after you sent us the file
+  •	Even with the new firmware update, there are times when the records are not downloaded by the pixsee device, so they are not played (mainly in older firmwares)
+  •	Airtable - 291 and 292 (Bug on pixsee cloud)
+
+  •	Improve the animation when user is redirected to the subscription screen from the voice recorder screen
+  •	There will appear duplicated file names  in the list because the app was crashing in a very specific situation in older iPhones, so it took a really long time to fix, but the file names were broken in this fix and it will take more time to solve, that’s why we didn’t fix it yet
+  •	The upload animation has broken for small records. This also was broken with the previous fix
+  •	In the recorder screen, when user stops to record, there is an overlay of images.
+
+{Suggestion: Possible improvement}
+  •	In the voice recording screen, when the user has many records in the list so that they should scroll to see all of them, the “record a new audio” button (+) overrides the options to delete and edit. How should we solve it? 
+Would this be an acceptable resolution?
+
+
+/*************************
  Version: 1.0.17 (177)
  Date: March 1, 2021
  *************************/
