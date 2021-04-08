@@ -1,4 +1,17 @@
 /****************************
+ Version: 0.003.58
+ Date: April 8, 2021
+ ****************************/
+[System][Debug] Disable user mode codedump.
+[System] [FileSystem] Read-only root/persist/config in user mode.
+[System] [NTP] Add daily china NTP sync.
+[System] [adb] Change configfs mount point and adb info.
+[Bug Fix][AE] Fix bug (array length problem)
+[Bug Fix] [Audio] Fix wav cycle play noise.
+[Bug Fix] [5M Capture] Fix snapshot response error
+[Bug Fix] [VoiceRecord] Increase query voice list buffer.
+
+/****************************
  Version: 0.003.56
  Date: March 26, 2021
  ****************************/
