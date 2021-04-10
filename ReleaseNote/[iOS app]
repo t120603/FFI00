@@ -1,4 +1,42 @@
 /*************************
+ Version: 1.0.17 (181)
+ Date: April 10, 2021
+ *************************/
+
+Delivered issues are listed below:
+•	WeChat login
+•	Scheduling Play
+•	"Music" description is duplicated in the music screen
+•	Voice recording
+•	[Family album] Photos are disappearing when user updates the app versions
+•	[CR] Event history alerts (strings)
+•	[CR] Make the Sign up page the First page at the first time user access it (after installation)
+•	[CR - Temporary] Hide voice record for scheduling play feature
+•	[E-mail] VSaaS update for multiple devices future feature
+•	Airtable - 292
+•	Bugzilla - 648
+
+Known Issues (We are already working on it in order to fix and delivery it next week):
+•	WeChat
+o	[CR] WeChat & Apple login] Complete your information screen error handling
+o	It’s possible to sign up with WeChat using an email that is already registered in Pixsee Account
+o	It’s possible to bind WeChat with many Pixsee Accounts
+o	[Improvement] The “change password” field in the User Profile screen appears quickly then disappears if user logins with a WeChat account (when they have sign up with this WeChat account). This field shouldn’t appear in this case.
+o	Security issue sent by Spencer. E-mail: WeChat/Apple SSO SECURITY RISK - check_email/ endpoint doesn't verify existing Pixsee account
+o	User loses Subscription after log in Pixsee using WeChat account
+•	Scheduling Play
+o	“Times” information is not correctly saved. E-mail: [ FFI00 ] FW 00.003.58 SCHEDULE_PLAY Issue
+o	The firmware still plays a scheduling that has been deleted from the device and from cloud
+o	App doesn't stop loading when user has 2 iPhones and logs in the same account and both tries to delete the same scheduled plan, one gets to do it, the other get stuck in the loading screen
+o	[CR][Scheduling Play & Voice Record] Error when trying to get schedule plan list related to voice recording
+•	Bugs found in Regression tests and Other issues that are being fixed
+o	[Playback] When user takes a picture from the playback screen, the photo taken is not the expected photo
+o	[Playback] Capture with timer available. It shouldn’t be.
+o	[Bugzilla#616] - Must be possible to share photos using QQ Mail 
+o	[CR] Update Sign in and Sign up screen layout
+o	[Streaming] Video recorder toast is not always shown when user records a small video
+
+/*************************
  Version: 1.0.17 (180)
  Date: April 2, 2021
  *************************/
